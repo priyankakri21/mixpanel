@@ -1,0 +1,37 @@
+
+
+<% if user_signed_in? %>
+	<%= link_to "Logout", destroy_user_session_path(), method: :delete %>
+<%else%>
+	<%= link_to "Sign Up",new_user_registration_path() %>
+	<%= link_to "Sign In", new_user_session_path() %>
+<%end%>
+
+
+<div class="box1">
+<div class="image" id="nav">
+
+ <%= link_to  image_tag("icon1.png", class: "menu_icon") , index2_path %>
+
+</div>
+<div class="image" id="nav1">
+
+ <%= link_to  image_tag("rose.jpeg", class: "menu_icon") , index2_path %>
+
+</div>
+<div class="details">
+
+<p>zmncmkdsnckjasbd cnjms</p>
+</div>
+</div>
+<script >
+	
+
+	 mixpanel.track_links("#nav a", "click nav link", {
+        "referrer": document.referrer
+    });
+	  mixpanel.track_links("#nav1 a", "click nav link", {
+        "referrer1": document.referrer1
+    });
+	  mixpanel.track("Signup");
+</script>
